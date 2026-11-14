@@ -1,0 +1,141 @@
+[
+  {
+    "slug": "designing-a-rock-climbing-robot-to-traverse-extreme-terrain",
+    "title": "Designing a Rock-Climbing Robot to Traverse Extreme Terrain",
+    "date": "2024-12-02",
+    "image": "files/Screenshot-2024-12-02-at-3.03.45-PM.jpg",
+    "excerpt": "In the first semester of my Master’s of Engineering program, I decided to join the Master’s Capstone course to get a taste of graduate-level robotics research. I teamed up with 4…",
+    "tags": [
+      "Robotics",
+      "Software"
+    ]
+  },
+  {
+    "slug": "standardizing-medicine-with-robotics-from-sutures-to-epidurals",
+    "title": "Standardizing Medicine with Robotics: From Sutures to Epidurals",
+    "date": "2024-12-01",
+    "image": "files/Screenshot-2024-12-09-at-6.49.31-PM-e1733788237326.jpg",
+    "excerpt": "As a Mechanical Engineering Master’s student with a background in Biomedical Engineering, I’ve been very interested in how engineering and technology can transform healthcare. My…",
+    "tags": [
+      "Robotics",
+      "Medical Devices",
+      "Research"
+    ]
+  },
+  {
+    "slug": "appreciating-nature-from-the-sky",
+    "title": "Appreciating Nature from the Sky",
+    "date": "2024-09-21",
+    "image": "files/Screenshot-2024-04-17-at-12.55.54-PM.jpg",
+    "excerpt": "Nature and photography are two of my favorite hobbies, so when I received a DJI drone as a Christmas gift in 2022, it felt like the perfect fit. Since then, my drone has…",
+    "tags": [
+      "Personal"
+    ]
+  },
+  {
+    "slug": "when2tent-kvilles-automated-shift-scheduler",
+    "title": "When2Tent: Kville’s Automated Shift Scheduler",
+    "date": "2024-09-21",
+    "image": "files/When2TentLaunch.png",
+    "excerpt": "As a Duke student, I embraced the vibrant tradition of the Cameron Crazies, the spirited student section renowned in college basketball. Each year, leading up to the Duke vs. UNC…",
+    "tags": [
+      "Software"
+    ]
+  },
+  {
+    "slug": "monitoring-diabetic-foot-ulcers-to-prevent-amputation",
+    "title": "Monitoring Diabetic Foot Ulcers to Prevent Amputation",
+    "date": "2024-08-29",
+    "image": "files/Screenshot-2024-08-28-at-6.24.19-PM.png",
+    "excerpt": "In my senior year at Duke, I took a comprehensive two-semester design course focused on bringing a medical device from concept to manufacturing. Alongside three talented…",
+    "tags": [
+      "Medical Devices"
+    ]
+  },
+  {
+    "slug": "challenging-the-current-ct-calibration-techniques-at-los-alamos-national-lab",
+    "title": "Challenging the Current CT Calibration Techniques at Los Alamos National Lab",
+    "date": "2024-08-28",
+    "image": "files/Screenshot-2024-08-28-at-6.01.06-PM.png",
+    "excerpt": "Living and working in Los Alamos when Christopher Nolan’s ‘Oppenheimer’ hit the theaters was a surreal experience. It allowed me to place myself directly in the shoes of the…",
+    "tags": [
+      "Research",
+      "Imaging"
+    ]
+  },
+  {
+    "slug": "how-i-engineered-my-way-to-earning-front-row-seats-at-the-duke-vs-unc-game",
+    "title": "How I Engineered My Way to Earning Front Row Seats at the Duke vs UNC Game",
+    "date": "2024-08-28",
+    "image": "files/IMG_3752-e1726932455262.jpg",
+    "excerpt": "As a Duke student, I was thrilled to dive into the tradition of the Cameron Crazies—known as the most passionate and spirited student section in all of college basketball. Each…",
+    "tags": [
+      "Personal"
+    ]
+  },
+  {
+    "slug": "designing-a-better-cystoscope",
+    "title": "Redesigning the Humble Cystoscope",
+    "date": "2024-04-17",
+    "image": "files/CystoscopeFinalRender5.jpg",
+    "excerpt": "In my senior year at Duke, I took a course called Advanced Design and Manufacturing, in which I learned how to design a medical device from start to finish. We were assigned a…",
+    "tags": [
+      "Medical Devices",
+      "CAD"
+    ]
+  },
+  {
+    "slug": "designing-a-kid-friendly-eye-dropper",
+    "title": "Designing a Kid-Friendly Eye Dropper",
+    "date": "2024-04-17",
+    "image": "files/Screenshot-2024-04-17-at-11.40.50-AM.png",
+    "excerpt": "For the final project in my Advanced Design and Manufacturing class, I was tasked with designing a device from start to finish to address a biomedical need. I decided to tackle a…",
+    "tags": [
+      "Medical Devices",
+      "CAD"
+    ]
+  },
+  {
+    "slug": "at-home-blood-draw-device",
+    "title": "Rethinking an At-Home Blood Draw Device",
+    "date": "2024-02-27",
+    "image": "files/Screenshot-2024-02-26-at-10.35.26-PM.jpg",
+    "excerpt": "During my summer internship at Gener8, I was always eager to learn about the various projects happening in the lab. One day, while chatting with a coworker, I learned about an…",
+    "tags": [
+      "Medical Devices"
+    ]
+  },
+  {
+    "slug": "gener8-cartridge-design",
+    "title": "Cartridge Design as a Gener8 Intern",
+    "date": "2024-02-27",
+    "image": "files/Capture11.png",
+    "excerpt": "During my summer as a product development intern at Gener8, I had the incredible opportunity to design disposable cartridges for biotechnology companies eager to launch their…",
+    "tags": [
+      "Medical Devices",
+      "CAD"
+    ]
+  },
+  {
+    "slug": "protecting-children-in-car-crashes",
+    "title": "Using FEA to Protect Children in Car Crashes",
+    "date": "2024-02-27",
+    "image": "files/Screenshot-2024-02-26-at-11.36.12-PM.png",
+    "excerpt": "During my senior year, I enrolled in a senior design course led by Dr. Jason Luck, who is renowned for his research on pediatric neck biomechanics and injury response. Given that…",
+    "tags": [
+      "Research",
+      "Simulation"
+    ]
+  },
+  {
+    "slug": "using-machine-learning-to-track-concussions-in-football",
+    "title": "Harnessing AI to Track Concussions in Football",
+    "date": "2024-02-27",
+    "image": "files/Screenshot-2023-09-28-at-12.07.09-PM.png",
+    "excerpt": "I joined Duke’s Injury Biomechanics Lab during my freshman year, which helped me gain exposure to the world of research. One of the main goals of our lab has been to characterize…",
+    "tags": [
+      "Research",
+      "Machine Learning"
+    ]
+  }
+]

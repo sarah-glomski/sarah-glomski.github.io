@@ -1,0 +1,222 @@
+[
+  {
+    "org": "PhD Research Rotation Program, Stanford University",
+    "dates": "Sep 2025 – Present",
+    "role": "Doctoral Researcher",
+    "bullets": [
+      "Leading projects to teach robots to draw context from humans in human-robot collaborative manipulation tasks"
+    ],
+    "media": []
+  },
+  {
+    "org": "Surgical Education and Activities Laboratory",
+    "dates": "Aug 2024 – May 2025",
+    "role": "Graduate Researcher",
+    "bullets": [
+      "Led a collaboration with the Duke Medical School to track resident surgeon performance by designing a data collection framework for analyzing hand movements during suturing tasks",
+      "Designed a sensor-integrated tissue model to measure stress during suturing to quantify surgeon performance",
+      "Improved training in surgical robotics by creating ML algorithms to give real-time feedback on robotic suturing",
+      "Presented research findings at the 2025 International Symposium on Medical Robotics (ISMR)"
+    ],
+    "media": [
+      {
+        "title": "Standardizing Medicine with Robotics: From Sutures to Epidurals",
+        "href": "projects/standardizing-medicine-with-robotics-from-sutures-to-epidurals.html",
+        "note": "Blog post"
+      }
+    ]
+  },
+  {
+    "org": "Los Alamos National Laboratory",
+    "dates": "May 2023 – Aug 2024",
+    "role": "Non-Destructive Testing & Evaluation Engineer (part-time during school)",
+    "bullets": [
+      "Optimized quality assurance of nuclear detonators to help monitor and preserve the U.S. nuclear stockpile",
+      "Streamlined CT artifact research by creating a framework to connect simulation and reconstruction software",
+      "Developed methods to apply the ASTM E1695 Standard for CT system QA to artifact characterization",
+      "Developed a new CT calibration method with an 88% reduction in error and 80% reduction in noise sensitivity compared to the current standard; incorporated this technique into the existing CT pipeline",
+      "Simulated the effects of CT cabinet misalignment to teach radiographers how to diagnose various CT artifacts",
+      "Shared findings with an esteemed podium presentation to the Non-Destructive Testing & Evaluation division"
+    ],
+    "media": [
+      {
+        "title": "Challenging the Current CT Calibration Techniques at Los Alamos National Lab",
+        "href": "projects/challenging-the-current-ct-calibration-techniques-at-los-alamos-national-lab.html",
+        "note": "Blog post"
+      },
+      {
+        "title": "LANL Presentation 2023",
+        "href": "files/LANL-Presentation-2023.pdf",
+        "note": "Presented at the 2023 Los Alamos Student Symposium"
+      },
+      {
+        "title": "LANL Presentation 2024",
+        "href": "files/LANL-Presentation-2024.pdf",
+        "note": "Presented at the 2024 Los Alamos Student Symposium"
+      }
+    ]
+  },
+  {
+    "org": "Robotics Projects",
+    "dates": "Aug 2020 – Dec 2024",
+    "role": "",
+    "bullets": [],
+    "media": [
+      {
+        "title": "Designing a Rock-Climbing Robot to Traverse Extreme Terrain",
+        "href": "projects/designing-a-rock-climbing-robot-to-traverse-extreme-terrain.html",
+        "note": "Blog post describing MEMS Capstone work"
+      },
+      {
+        "title": "RoboSub Technical Design Report",
+        "href": "files/RoboSub-Technical-Design-Report.pdf",
+        "note": "Earned 1st place in the 2021 International RoboSub Competition with the Duke Robotics Club"
+      }
+    ]
+  },
+  {
+    "org": "Duke BME Medical Device Design Course",
+    "dates": "Aug 2023 – May 2024",
+    "role": "Senior BME Student",
+    "bullets": [
+      "Collaborated with 3 other BME seniors over 2 semesters to develop a medical device for monitoring diabetic foot ulcers in diabetic patients; filed IP disclosure and abstract accepted into Adv. Tech. & Treatments for Diabetes",
+      "Developed multi-model sensors to detect pre-ulcerative calluses via skin temp and modulus within 88% accuracy",
+      "Derived novel formulas for spherical skin indentation to back-calculate skin modulus based on force applied",
+      "Presented results at the 2024 Diabetic Lower Extremity Symposium (DLES) and Duke Engineering Design Symposium"
+    ],
+    "media": [
+      {
+        "title": "Monitoring Diabetic Foot Ulcers to Prevent Amputation",
+        "href": "projects/monitoring-diabetic-foot-ulcers-to-prevent-amputation.html",
+        "note": "Blog post"
+      },
+      {
+        "title": "BME474 ATTD Abstract",
+        "href": "files/BME474-AATD-Abstract.pdf",
+        "note": "Accepted into the Advanced Technologies and Treatments for Diabetes journal"
+      },
+      {
+        "title": "BME474 Poster",
+        "href": "files/BME474-Poster.pdf",
+        "note": "Presented at the Duke Engineering Design Symposium"
+      }
+    ]
+  },
+  {
+    "org": "Injury Biomechanics Laboratory, Duke University",
+    "dates": "Jan 2021 – May 2024",
+    "role": "Undergraduate Research & Independent Study Student (x3)",
+    "bullets": [
+      "Developed methods for collecting and processing kinematic data from sensors in high school football players’ ears",
+      "Trained deep learning models to classify sub-concussive head impacts from practice data and simulated data",
+      "Applied Gradient Class-Activated Mapping (Grad-CAM) to assess and visualize model decision-making processes",
+      "Presented findings to hundreds of engineers at the annual Biomedical Engineering Society (BMES) conference",
+      "Earned the SMIF Undergraduate User Program (SUUP) grant for characterizing lumbar spine injuries from micro-CT scans of crushed cadaver vertebrae",
+      "Devised an experimental setup for cyclic load testing on post-mortem human subject (PMHS) lumbar spines",
+      "Assisted PhD candidates with literature reviews, simulated data collection in LS-DYNA, and CAD design"
+    ],
+    "media": [
+      {
+        "title": "Harnessing AI to Track Concussions in Football",
+        "href": "projects/using-machine-learning-to-track-concussions-in-football.html",
+        "note": "Blog post"
+      },
+      {
+        "title": "BMES Poster",
+        "href": "files/BMES-Poster.pdf",
+        "note": "Presented at the 2023 Biomedical Engineering Society (BMES) Conference"
+      },
+      {
+        "title": "GWDD Abstract",
+        "href": "files/GWDD-Abstract.pdf",
+        "note": "Submitted to graduate with departmental distinction"
+      },
+      {
+        "title": "GWDD Poster",
+        "href": "files/GWDD-Poster.pdf",
+        "note": "Presented to graduate with departmental distinction"
+      },
+      {
+        "title": "GWDD Paper",
+        "href": "files/GWDD-Paper.pdf",
+        "note": "Submitted to graduate with departmental distinction"
+      },
+      {
+        "title": "SUUP Grant",
+        "href": "files/SUUP-Grant.pdf",
+        "note": "Submitted to receive SUUP grant funding"
+      }
+    ]
+  },
+  {
+    "org": "Duke BME Vehicle Safety Design Course",
+    "dates": "Aug 2023 – Dec 2023",
+    "role": "Senior BME Student",
+    "bullets": [
+      "Worked with 3 other BME seniors to develop a new biomechanical neck model for protecting children in car crashes",
+      "Developed performance corridors and evaluation metrics to assess model performance based on literature data",
+      "Shared results with a poster presentation at the 2023 Duke Engineering Symposium"
+    ],
+    "media": [
+      {
+        "title": "Using FEA to Protect Children in Car Crashes",
+        "href": "projects/protecting-children-in-car-crashes.html",
+        "note": "Blog post"
+      },
+      {
+        "title": "BME432 Poster",
+        "href": "files/BME432-Poster.pdf",
+        "note": "Presented at the Duke Engineering Design Symposium"
+      }
+    ]
+  },
+  {
+    "org": "DOmath Program, Duke University",
+    "dates": "May 2021 – Jul 2021",
+    "role": "Undergraduate Researcher",
+    "bullets": [
+      "Developed and implemented a new algorithm for more accurate targeted radiation therapy of a region of interest",
+      "Derived formulas to create algebraic reconstruction algorithms to solve computational inverse problems",
+      "Presented findings at the DOmath Research Symposium and authored a manuscript"
+    ],
+    "media": [
+      {
+        "title": "DOmath Report",
+        "href": "files/DOmath-Report.pdf",
+        "note": "Submitted as final deliverable for the DOmath program"
+      },
+      {
+        "title": "DOmath Presentation Slides",
+        "href": "files/DOmath-Presentation-Slides.pdf",
+        "note": "Presented at the DOmath Research Symposium"
+      }
+    ]
+  },
+  {
+    "org": "Human Neuromechanics Laboratory, University of Florida",
+    "dates": "Jun 2019 – Aug 2019",
+    "role": "",
+    "bullets": [
+      "Streamlined the EEG and EMG data-collection process for participants in a kinematic brain study",
+      "Designed a device capable of isolating and removing neck muscle artifacts from EEG data",
+      "Won the Best BME Research Paper Award (85+ participants)"
+    ],
+    "media": [
+      {
+        "title": "SSTP Poster",
+        "href": "files/SSTP-Poster.pdf",
+        "note": "Presented at the Student Science Training Program Symposium"
+      },
+      {
+        "title": "SSTP Presentation",
+        "href": "files/SSTP-Presentation.pdf",
+        "note": "Presented internally at the Student Science Training Program"
+      },
+      {
+        "title": "SSTP Paper",
+        "href": "files/SSTP-Paper.pdf",
+        "note": "Received the Best BME Research Paper Award (85+ participants)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When2Tent: Kville’s Automated Shift Scheduler · Sarah Glomski</title>
+<meta name="description" content="As a Duke student, I embraced the vibrant tradition of the Cameron Crazies, the spirited student section renowned in college basketball. Each year, leading up to the Duke vs. UNC…">
+<meta property="og:title" content="When2Tent: Kville’s Automated Shift Scheduler · Sarah Glomski">
+<meta property="og:description" content="As a Duke student, I embraced the vibrant tradition of the Cameron Crazies, the spirited student section renowned in college basketball. Each year, leading up to the Duke vs. UNC…">
+<meta property="og:image" content="https://sarah-glomski.github.io/files/When2TentLaunch.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="../index.html">Sarah Glomski</a>
+    <nav class="site-nav" aria-label="Main"><a href="../index.html" aria-current="page">Projects</a><a href="../research.html">Research</a><a href="../about.html">About</a><a href="../resume.html">Resume</a><a class="icon-link" href="https://www.linkedin.com/in/sarah-glomski/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></nav>
+  </div>
+</header>
+<main>
+<article class="post">
+  <header class="post-head wrap narrow">
+    <a class="back" href="../index.html#projects">← All projects</a>
+    <ul class="tags"><li>Software</li></ul>
+    <h1>When2Tent: Kville’s Automated Shift Scheduler</h1>
+    <p class="meta">September 2024</p>
+  </header>
+  <div class="prose wrap narrow">
+<p>As a Duke student, I embraced the vibrant tradition of the Cameron Crazies, the spirited student section renowned in college basketball. Each year, leading up to the Duke vs. UNC game, students participate in “tenting”—a ritual where groups of 12 camp out for six weeks to secure their seats. Tenting has specific set of <a href="../files/K-Ville-Policy.pdf">rules</a>, including mandatory attendance for check-ins by the “line monitors” at all hours of the day, ensuring everyone’s commitment to the process. See my <a href="../projects/how-i-engineered-my-way-to-earning-front-row-seats-at-the-duke-vs-unc-game.html">post</a> about earning front row seats in the 2024 season!</p>
+<p>As a second-time tent captain, I was all too familiar with the challenges of creating a fair and easy-to-read schedule for my team. In my first season back in 2022, I gathered personal schedules from each team member, considering their classes, extracurriculars, and preferences for shift lengths. This painstaking process took about 20 hours—something I admittedly threw myself into over winter break.</p>
+<figure><img src="../files/Screenshot-2024-09-21-at-1.15.12-PM.png" alt="" loading="lazy"><figcaption>Hand-made schedule from my first tenting season in 2022.</figcaption></figure>
+<p>If this time commitment wasn&#8217;t enough, as soon as I sent out the schedule, shift trade requests started pouring in. Initially, I tried to manage each request directly, but as the season progressed and my study sessions became increasingly interrupted, I knew I needed a more efficient solution.</p>
+<p>One day, during a long flight, I decided to explore coding an algorithm in Python. Although I had only recently learned to code, I crafted a basic framework for user input and output but struggled to get the algorithm functioning properly. I put the idea on hold for more urgent schoolwork, but as the next tenting season approached, I couldn’t shake the thought of tackling this problem. In October 2023, one year later, I took another shot at coding on a flight, armed with new skills in machine learning and advanced algorithms from my studies at Los Alamos. This time, I managed to write a solid 400 lines of code in one sitting. When I got home, I excitedly continued my work and over the course of a few weeks, my complex algorithm grew to over 1,000 lines.</p>
+<p>By this time, I had pitched my idea to several friends who were planning to tent. All of them were excited by the idea and encouraged me to continue. My roommate, Keena Gao, like me, had never made a website, but was eager to learn. Together, we took to tackling this problem with the goal of launching a website to help teams create and manage their tenting schedules. Little did we know it would take another 2 months and 2,000 more lines of code to get our idea up and running.</p>
+<p>Seeking guidance, we applied for a grant through the <a href="https://colab.duke.edu/project/when2tent-k-villes-automated-shift-scheduler/" target="_blank" rel="noopener">Duke Innovation Colab</a>. They provided funding and invaluable support throughout the development process. With advice from a fellow student who had launched his own website, we converted my Python algorithm into an API and hosted it on PythonAnywhere. Keena took charge of designing the front end using ReactJS. We created a Trello board and a Git repository, meeting regularly to work through challenges. It was in one of these early meetings that we eagerly decided on our site&#8217;s name: When2Tent. A nod to the commonly used when2meet.com, we felt the name was catchy enough to win the hearts of our fellow students.</p>
+<figure><img src="../files/Screenshot-2024-09-21-at-1.32.55-PM.jpg" alt="" loading="lazy"><figcaption>Trello board showing project tasks and schedule.</figcaption></figure>
+<p>I was proud of our final product. <a href="https://when2tent.com/" target="_blank" rel="noopener">When2Tent.com</a> guided groups through the scheduling process, allowing them to create a team, share availability, view an auto-generated schedule, and trade shifts. Each member had a unique dashboard that displayed their personal schedule and team shifts. The site even suggested optimal trades for team members based on availability, with notifications similar to Fantasy Football trade requests.</p>
+<figure><img src="../files/IMG_9045.jpg" alt="" loading="lazy"><figcaption>Login page on mobile device.</figcaption></figure>
+<p>To promote our launch, we created flyers and posted them around campus and on social media. At one point, every women&#8217;s bathroom on campus had an ad for our site! It was nerve-wracking to know that one small bug could derail our progress. I felt like Mark Zuckerberg when he launched FaceBook in The Social Network!</p>
+<figure><img src="../files/When2TentLaunch.png" alt="" loading="lazy"><figcaption>When2Tent launch flyer.</figcaption></figure>
+<p>Thanks to our dedication and ongoing maintenance, When2Tent received a plethora of positive feedback during its first season. We saw 180 registered users from more than 20 tents, many of whom found our visual shift management and trade features to be exceedingly helpful. We also received constructive criticism, leading us to implement quick fixes throughout the season. Other suggestions, like shifting from email updates to SMS notifications to enhance user experience, were too extensive to tackle mid-season, but were noted for future versions.</p>
+<p>By the end of the tenting season, Keena and I were set to graduate in a matter of months. Determined to keep our project alive for future generations of Duke students, I organized a meeting with the Colab and the Duke Applied Machine Learning Club (DAML) to discuss future plans. Now, with the next season of tenting coming up, the student programmers in DAML are working diligently to implement new features, bolster database security, and document our processes for generations of students to come.</p>
+
+  </div>
+  <div class="wrap narrow"><nav class="pager" aria-label="More projects"><a class="prev" href="appreciating-nature-from-the-sky.html"><span>Newer</span>Appreciating Nature from the Sky</a><a class="next" href="monitoring-diabetic-foot-ulcers-to-prevent-amputation.html"><span>Older</span>Monitoring Diabetic Foot Ulcers to Prevent Amputation</a></nav></div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-cta">Contact</p>
+    <div class="footer-links">
+      <a href="mailto:glomski@stanford.edu"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm-1 1 9 7 9-7"/></svg><span>glomski@stanford.edu</span></a>
+      <a href="https://www.linkedin.com/in/sarah-glomski/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>LinkedIn</span></a>
+      <a href="../files/Sarah-Glomski-Resume.pdf" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8zm0 0v5h5M9 13h6M9 17h6"/></svg><span>Resume (PDF)</span></a>
+    </div>
+    <p class="fineprint">© 2026 Sarah Glomski</p>
+  </div>
+</footer>
+</body>
+</html>

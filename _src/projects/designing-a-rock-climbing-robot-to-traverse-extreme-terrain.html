@@ -1,0 +1,291 @@
+<p>In the first semester of my Master&#8217;s of Engineering program, I decided to join the Master&#8217;s Capstone course to get a taste of graduate-level robotics research. I teamed up with 4 other MEMS Master&#8217;s students to tackle the problem of a rock-climbing robot for extraterrestrial exploration. This post outlines the project background, goals, and breakdown, guiding users through the process of replicating our work, as per the requirements for our course. </p>
+<p>I contributed to many parts of this project, including ideation, climbing wall design, gripper design, motor specifications, and chassis design. I was involved in every aspect of the project and made an effort to learn new skills from my teammates. In the end, we were all very proud of our working model!</p>
+<figure><img src="@root/files/capstone-Subject-2.png" alt="" loading="lazy"></figure>
+<p><em>Final assembly of climbing robot</em></p>
+<h2>Project Background</h2>
+<p>Human curiosity drives us to explore the unknown and push the boundaries of discovery. As we turn our gaze to Mars and other planets, the challenges of its rugged terrain demand new solutions beyond traditional rovers.</p>
+<p>To explore the planet’s cliffs, caves, and vertical surfaces, we need climbing robots and agile systems capable of reaching these tough-to-access areas. These machines could reveal Mars’ secrets, help assess its potential for colonization, and even uncover signs of ancient life.</p>
+<p>The following factors highlight why developing such versatile robotic systems is crucial:</p>
+<ul>
+<li>Increasing interest in Mars exploration for scientific discovery and potential colonization</li>
+<li>Need for versatile robotic systems to navigate challenging Martian terrain</li>
+<li>Importance of vertical mobility in exploring cliff faces, lava tubes, and other geological features</li>
+<li>Potential applications in future space habitats and orbital stations</li>
+<li>Challenges of operating in low-gravity, low-pressure environments</li>
+<li>Inspiration from NASA&#8217;s LEMUR (Limbed Excursion Mechanical Utility Robot) project</li>
+</ul>
+<figure><img src="@root/files/capstone-Screenshot-at-Nov-15-10-55-32.png" alt="" loading="lazy"></figure>
+<h3>Project Goals</h3>
+<p>For our project, we plan to explore and develop technologies for robotic climbing mechanism used on rough surfaces. This development includes:</p>
+<ul>
+<li>An end-effector with exceptionally strong gripping force</li>
+<li>A lightweight body to limit the torque required by the gripper and other joints</li>
+<li>Strong joints for lifting the body</li>
+<li>A smart climbing technique, perhaps using path planning</li>
+</ul>
+<h3>Problem Statement</h3>
+<p>Current robotic climbing systems lack sufficient<strong> gripping and motion tracking systems</strong>,  presenting a need for more versatile lightweight systems with strong <strong>gripping end-effectors</strong>, robust <strong>joint connections</strong>, and smart <strong>path planning</strong>.</p>
+<h2>Project Breakdown</h2>
+<p>In this section, we’ll break down the key design elements of our Cliffhanger climbing robot and provide a step-by-step guide on how to build it. We&#8217;ll cover everything from the structural components and sensor integration to the mechanisms that allow it to navigate vertical surfaces. Whether you&#8217;re a robotics enthusiast or an engineer, this detailed overview will help you understand our approach and give you the tools to replicate or adapt the design for your own projects. The project is broken down into 3 stages:</p>
+<ul>
+<li>Stage 1: Mechanical</li>
+<li>Stage 2: Electrical</li>
+<li>Stage 3: Autonomy</li>
+</ul>
+<h3>Stage 1: Mechanical</h3>
+<p>Let’s dive into the mechanical design of our climbing robot. We’ll explore the key components, materials, and mechanisms that enable it to grip, climb, and maneuver effectively. Most of the required parts are 3D printed along with a few small, hardware parts. All 3D-printable designs and CAD files will soon be available on Thingiverse, making it easy for you to recreate or customize the parts for your own robot.</p>
+<h4>Climbing Wall</h4>
+<p>Before we could start designing the physical robot, we had to define the environment it would perform in. We decided to design a climbing wall with custom handholds spaced vertically on a board.</p>
+<p><img src="@root/files/capstone-Screenshot-2024-12-10-at-7.52.51-PM-1.png" alt="" loading="lazy"><em>Climbing wall with 6 handholds</em></p>
+<p>We started with a realistic handhold that you may find in a climbing gym, but quickly iterated to a jug hold, which is the easiest climbing hold to grip because it highly constrains the climber’s hand.</p>
+<p><img src="@root/files/Screenshot_2024-12-10_at_7.52.44_PM-removebg-preview.png" alt="" loading="lazy"><em>Simple jug hold design</em></p>
+<p>We 3d printed 6 of these jug holds in the same blue color so that our computer vision task would be made easier. We screwed the jug holds into a plywood board, starting with standardized distances of 8 inches vertically and 9 inches horizontally. After some success with initial testing, we moved to more variable distances to test the flexibility of our robot in dynamic environments.</p>
+<h4>Gripper</h4>
+<p>For the gripper design, we were able to use a static hook due to the simplicity of the jug hold. We started with a very basic hook design and then added some complexity by having it self-guide into the hold. This took some iteration, as we had to make sure the gripper was constrained enough to support the full weight of the robot, while not getting lodged inside the jug hold.</p>
+<p><img src="@root/files/Screenshot_2024-12-03_at_9.02.35_PM-removebg-preview.png" alt="" loading="lazy"><em>Final gripper design</em></p>
+<p>We designed a modular interface between the gripper and the arm so that we could interchange different gripper attachments for fast iteration. After some initial trials, it was noted that the modular interface had to be 1) robust enough to support the tension and torsion of the robot’s dynamic movements, and 2) non-obstructive to the hook-jug hold interface. After some iteration, this combination was achieved.</p>
+<p><img src="@root/files/Screenshot_2024-12-05_at_8.06.16_PM-removebg-preview.png" alt="" loading="lazy"><em>Modular interface at wrist joint</em></p>
+<p>The width of the gripper was modified several times to determine the optimal fitment. In the end, a narrower grip was preferred because of the higher flexibility that this gave to the robot’s range of reach.</p>
+<p><img src="@root/files/capstone-Screenshot-2024-12-10-at-7.54.18-PM-1.png" alt="" loading="lazy"><em>Final static gripper design grasping handhold</em></p>
+<h4>Actuated Gripper</h4>
+<p>We explored advanced designs for the gripper in parallel for more complex gripping requirements. We started with a kinematic and force analysis to determine the technical requirements of the gripper.</p>
+<p>Over the course of the design process, the gripper evolved. It started as a tendon-actuated 2-DoF gripper meant to accommodate more complex jug-holds, but as the design of the rock wall became more defined, we transitioned to a 1-DoF motor driven gripper with a high ratio worm gear to provide the static torque needed to hold the robot.</p>
+<p><img src="@root/files/Screenshot_2024-12-20_at_1.52.55_PM-removebg-preview.png" alt="" loading="lazy"><br>
+<em>CAD assembly of actuated gripper design</em></p>
+<p>The advanced gripper design was developed in parallel to the rest of the project, and achieved final assembly. However, no significant testing was performed with the advanced gripper due to the complexity of adding an additional degree of freedom to the autonomous algorithm.</p>
+<p><img src="@root/files/Screenshot_2024-12-20_at_1.53.05_PM-removebg-preview.png" alt="" loading="lazy"><br>
+<em>Physical implementation of actuated gripper</em></p>
+<h4>Linear Actuator Arms</h4>
+<p>To reach certain joints, we decided that a prismatic joint has a lot of benefits to keep our design simple yet strong and relatively lightweight. We found that this 3-stage linear actuator concept from thang010146 helps us maximize strength and reach in a compact design.</p>
+<p>Because it is a 3-stage linear actuator, every additional inch of added to the collapsed length adds an extra three inches of travel. This means that with an original 10 inch length, the arm can extend to around 34 inches of total length. These are incredible gains compared to typical linear actuators!</p>
+<p>Since the geometries of each part are somewhat difficult to manufacture, we were able to take advantage of 3D printing and simplify the parts and eliminate the use of any additional hardware from thang010146’s design. The entire actuator is 3D printed and very strong! We found that these prints could be printed well on any Bambu Lab 3d printer (with mostly default settings), and the tolerances turn out great! This design is also parametric so we can change the travel lengths, wall thicknesses, thread pitch, and more with just one variable.</p>
+<p><img src="@root/files/Screenshot_2024-12-20_at_1.53.13_PM-removebg-preview.png" alt="" loading="lazy"><br>
+<em>Three-stage linear actuator with top slider part hidden. This exposes how the screw parts synchronize in rotation and then the rotation of the sliders is constrained to convert rotational motion from the screws to the linear translation of the sliders.</em></p>
+<p><img src="@root/files/Screenshot_2024-12-20_at_1.53.20_PM-removebg-preview.png" alt="" loading="lazy"><br>
+<em>Section view of three-stage linear actuator 3D printed design. The original concept was adapted from thang010146’s design. Channels/keyways are used so three screw-like parts can spin synchronusly while the slider parts are restricted to convert rotational motion to translation.</em></p>
+<p><img src="@root/files/Screenshot_2024-12-20_at_1.56.34_PM-removebg-preview.png" alt="" loading="lazy"><em>Section view of three-stage linear actuator 3D printed design, fully extended</em></p>
+<p>To drive this actuator, we used a 25GA370 12V DC Encoded Motor which runs at 150 RPM. This motor provides enough strength to lift the entire robot and provide relative position. An additional limit switch can be added for absolute position as well.</p>
+<h4>Chassis</h4>
+<p>We wanted a chassis that would fit around our electronics and hold them firmly in place. We designed a clam shell that used tight tolerances to secure the electronics boards in place while still providing ventilation and access to the ports. The two halves of the clam shell are held together with bolts for easy access in the event that more detailed electrical work should be needed.</p>
+<p><img src="@root/files/Screenshot_2024-12-03_at_9.33.01_PM-removebg-preview.png" alt="" loading="lazy"><em>CAD model of clam shell chassis</em></p>
+<p>Below the main frame, we attached 2 castor wheels that run along the plywood part of the climbing wall.  The purpose of these wheels is to provide support and balance to the robot’s body while reducing drag as it climbs.</p>
+<p><img src="@root/files/Screenshot_2024-12-03_at_9.23.41_PM-removebg-preview-1.png" alt="" loading="lazy"> <em>Side view of castor wheels below chassis</em></p>
+<p>Near the front of the chassis, the shoulder joints attach for the arms. This minimalistic interface allows the wires that power the motors to flex based on the movement of the robot arms.</p>
+<figure><img src="@root/files/Screenshot_2024-12-10_at_7.53.59_PM-removebg-preview.png" alt="" loading="lazy"></figure>
+<p><em>Top view of chassis surrounding electronics</em></p>
+<h3>Stage 2: Electrical</h3>
+<h4>Adding the Brains: Wiring and Software Setup</h4>
+<p>Now that we have gathered and assembled most of the mechanical parts of the robot, let’s make it smart!</p>
+<p>To add brains to a robot, we need to add some electronics. This includes a microcontroller or computer, and power distribution. Listed below is a list of the electrical components that are used for this robot. Additionally a PCB has been designed to make the wiring much easier, cleaner, and less likely to destroy anything.</p>
+<p>For this robot, we will also be using ROS2 Jazzy. This will help facility good communication between a host computer and the robot, distribute computation power, and it will seamlessly handle all the necessary information for the functions that run the robot.</p>
+<h4>Bill of Materials</h4>
+<ul>
+<li>Personal (host) Computer running Ubuntu 24.04 Noble Numbat</li>
+<li>Soldering Iron (with solder)</li>
+<li>Wire strippers</li>
+<li>Intel Realsense D435 Depth Camera</li>
+<li>Raspberry Pi 4B (or 5) running Ubuntu 24.04 Noble Numbat</li>
+<li>ESP-WROOM-32 Microcontroller</li>
+<li>TB6612FNG Dual DC Motor Driver</li>
+<li>12V to 5V 5A Buck Converter</li>
+<li>Two Micro Limit Switches</li>
+<li>LTC3780 130W DC Buck-Boost Converter (Set to 6.8V Output)</li>
+<li>At least 100 Male Header Pins</li>
+<li>At least 70 Female Header Pins</li>
+<li>Custom PCB (See below for files)</li>
+<li>At least three 18650 Batteries w/ charger (or 12v power alternative)</li>
+<li>3 Sets of Spring Contacts for 18650 Batteries</li>
+<li>Wire (~18 AWG should be fine)</li>
+<li>10K Ohm Resistors</li>
+<li>(Optional) Nylon PCB Standoffs</li>
+</ul>
+<p>All of these parts except the personal tools, depth camera, and PCB can be found at this wishlist: <a href="https://www.amazon.com/hz/wishlist/ls/1FURLT03YV34J?ref_=wl_shar" target="_blank" rel="noopener">https://www.amazon.com/hz/wishlist/ls/1FURLT03YV34J?ref_=wl_share</a></p>
+<p>I designed my PCB through EasyEDA which made it easy and cheap to order from JLCPCB! I just got the nonassembled boards which keeps the price to near $20 including shipping. Not bad for custom boards that save hours or even days of breadboard wiring and soldering.</p>
+<p><img src="@root/files/capstone-Screenshot-2024-12-16-at-9.03.23-PM.png" alt="" loading="lazy"><em>Top (left) and bottom (right) sides of printed circuit board used for Cliffhanger climbing robot. Header pins and manual wires are soldered on so components can be added or swapped easily.</em></p>
+<h4>Assembly</h4>
+<p>Soldering the PCB isn’t too hard if you know how to solder. I have also included outlines for each part to make the assembly a bit easier. Simply solder header pins as pictured in the photo. Check component placement as you go. For any components that don’t perfectly fit the holes, use wire to connect them. Don’t forget to solder the resistors and dc motors. Solder wire to the battery terminals to connect the batteries in series. With three 18650 batteries at full charge, that means the max voltage is around 12.6V volts.</p>
+<p><img src="@root/files/capstone-Subject-1.png" alt="" loading="lazy"><em>Fully-assembled PCB for Cliffhanger climbing robot</em></p>
+<p>Now with all the header pins, we can plug in each component including the servo motors (double check to make sure the pins are aligned) and then plug in the battery. If you don’t see “magic smoke” and lights turn on normally, you should be good to go! If you find later that a component is faulty, you can always replace it with the ease of these header pins.</p>
+<h3>Stage 3: Autonomy</h3>
+<h4>ROS2 &amp; MoveIt2 Installation</h4>
+<p>Both computers (the Raspberry Pi and your host computer) which run Ubuntu 24.04 require us to install ROS2 Jazzy. Follow<a href="https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html" target="_blank" rel="noopener"> these instructions</a> to install ROS2 on each computer.</p>
+<p>The host computer will also need to run packages such as MoveIt 2 and other ROS2 Controllers. Run the following lines:</p>
+<p><code>sudo apt update</code></p>
+<p><code>sudo apt upgrade</code></p>
+<p><code>sudo apt install ros-jazzy-ros2-control ros-jazzy-ros2-controllers ros-jazzy-moveit</code></p>
+<p>An error has been commonly reported that prevents MoveIt 2 from launching properly. The error says “[ERROR] [launch]: Caught exception in launch (see debug for traceback): ‘capabilities&#8217;” If you get this error, you will need to go into the /opt/ros/jazzy directory and find the launches.py file and follow the instructions from <a href="https://robotics.stackexchange.com/questions/110134/trouble-launching-moveit2-configurations" target="_blank" rel="noopener">this link.</a></p>
+<p>Now that these ROS2 packages are installed, we will need to create a custom ROS2 workspace and install a couple more. The package can be made by running this line:</p>
+<p><code>mkdir -p ~/ros2_ws/src </code></p>
+<h4>Depth Camera Setup</h4>
+<p>Follow <a href="https://dev.intelrealsense.com/docs/compiling-librealsense-for-linux-ubuntu-guide" target="_blank" rel="noopener">these instructions</a> to install the Intel Realsense SDK on your host computer and follow the instructions from <a href="https://github.com/IntelRealSense/realsense-ros/tree/ros2-development" target="_blank" rel="noopener">this git repo</a> to set up the ROS2 wrapper. Then cd into ros2_ws/src and  This will help us later to run the Intel D435 Depth Camera.</p>
+<p><img src="@root/files/capstone-camera-intel-realsense-435i-1.png" alt="" loading="lazy"><em>Intel Realsense D435 Depth Camera</em></p>
+<h4>Git Repo</h4>
+<p>To use the packages for this robot, clone <a href="https://github.com/a99thomas/cliffhangers_ws" target="_blank" rel="noopener">this workspace</a> on both computers. It may be useful to add the included packages into your ros2_ws if you want to make sure you only have to source from that workspace.  Run <em>colcon build</em> to build the workspace and then resource it.</p>
+<h4>ESP32 Code</h4>
+<p>Before running anything, upload <a href="https://github.com/a99thomas/cliffhangers_ws/blob/main/esp32_motor_drive" target="_blank" rel="noopener">this code</a> to the ESP32 using the Arduino IDE, PlatformIO, or other preferred option. You may need to install the necessary boards and packages.</p>
+<h4>Running the Packages</h4>
+<p>Now to run the code, make sure both computers are on the same network and can ping each other.  SSH into the Raspberry Pi from the host computer, and enter the terminal command:</p>
+<p><code>ros2 run esp_comms rpi_esp_comms </code></p>
+<p>This should start communicating with the ESP32. If it can’t communicate with the ESP32, make sure it is using the correct USB Port by running:</p>
+<p><code>ls /dev/tty</code></p>
+<p>You may also need to set “groups” permissions for the computer to allow you to use the serial ports. If everything is running on the Pi properly, stop it with Ctrl+C. Now let’s test MoveIt2 on the host computer. Open a new terminal, source the workspace and ROS2 opt files. Run:</p>
+<p><code> ros2 launch climbbot3_moveit demo.launch.py</code></p>
+<p>RVIZ should pull up and load the robot. Play around with the joints to see if everything can move properly.</p>
+<p><img src="@root/files/capstone-Screenshot-2024-12-16-at-9.10.21-PM.png" alt="" loading="lazy"><em>Visualization of running the MoveIt launch file for the Cliffhanger climbing robot</em></p>
+<p>Now if we go back to our terminal used to SSH to the Pi, let’s rerun the rpi_esp_comms node. This should set all the joints to 0.0 or the current default configuration and the servos may move. Now if you move the robot arms around in RVIZ and plan and execute paths, the robot joints should mimic RVIZ’s movements.  The way this is performed is by subscribing to the /joint_states topic to follow the fake robot from MoveIt and then sending those joints over serial to the ESP32 to control the robot. The more proper way to do this is to make a hardware interface, set up proper joint controllers, and even set up MicroRos with the ESP32. The proper way however, takes a good amount of time and debugging effort so we took the slightly lazier way for the scope/timeline of this project.</p>
+<h4>Computer Vision Tutorial: Object Detection and Pose Estimation</h4>
+<p>This tutorial explains the computer vision system implemented for an autonomous rock climbing robot. We’ll cover three main components:</p>
+<ol>
+<li>Blue object detection for identifying climbing holds</li>
+<li>Converting 2D image coordinates to 3D world coordinates</li>
+<li>ArUco tag detection for robot pose estimation</li>
+<li>Path Planning and Execution</li>
+</ol>
+<h4>Object Detection</h4>
+<p>Our climbing robot needs to identify blue climbing holds on the wall. We use OpenCV’s color detection and image processing capabilities to accomplish this. Here’s how it works:</p>
+<ol>
+<li>Color Space Conversion
+<ul>
+<li>Convert the camera image from BGR to HSV color space</li>
+<li>HSV is better for color detection as it separates color from brightness</li>
+</ul>
+</li>
+<li>Color Thresholding
+<ul>
+<li>Define a range of blue colors in HSV space</li>
+<li>Create a binary mask highlighting only the blue pixels</li>
+<li>This effectively isolates the climbing holds from the background</li>
+</ul>
+</li>
+<li>Image Processing
+<ul>
+<li>Apply morphological operations (opening and closing) to clean up noise</li>
+<li>This removes small artifacts and fills small holes in the detection</li>
+</ul>
+</li>
+<li>Hold Detection
+<ul>
+<li>Find contours in the cleaned binary mask</li>
+<li>Filter contours by size to eliminate small detections</li>
+<li>Calculate bounding boxes around the remaining contours</li>
+<li>These boxes represent the locations of climbing holds</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://github.com/will-d-chen/realsense_pointcloud/blob/main/realsense_pointcloud_py/pointcloud_visualizer.py" target="_blank" rel="noopener">Github Link</a></p>
+<p><img src="@root/files/capstone-object-detection.png" alt="" loading="lazy"><em>Object detection on blue handholds</em></p>
+<h4>2D to 3D Coordinate Conversion</h4>
+<p>To plan climbing movements, we convert the 2D pixel locations of holds into 3D world coordinates using depth information.</p>
+<ol>
+<li>Depth Reading
+<ul>
+<li>For each detected hold, get the corresponding depth value from the depth camera</li>
+<li>This tells us how far the hold is from the camera</li>
+</ul>
+</li>
+<li>Coordinate Transformation
+<ul>
+<li>Use the camera’s intrinsic parameters (focal length, optical center) to convert pixel coordinates to normalized camera coordinates</li>
+<li>Combine with depth information to get 3D points in camera space</li>
+<li>This gives us the real-world position of each hold</li>
+</ul>
+</li>
+<li>Coordinate System Alignment
+<ul>
+<li>Transform the 3D points from camera coordinates to the robot’s coordinate system</li>
+<li>This allows the robot to understand where holds are relative to its own position</li>
+</ul>
+</li>
+</ol>
+<p><img src="@root/files/capstone-2d3d.png" alt="" loading="lazy"><em>Point cloud visualization of handholds in 3D space</em></p>
+<p><a href="https://github.com/will-d-chen/realsense_pointcloud/blob/main/realsense_pointcloud_py/pointcloud_visualizer.py" target="_blank" rel="noopener">Github Link</a></p>
+<h4>ArUco Tag Detection</h4>
+<p>ArUco tags on the robot’s base enable precise pose estimation. Here’s how the system tracks the robot’s position:</p>
+<ol>
+<li>Tag Detection
+<ul>
+<li>Convert camera image to grayscale</li>
+<li>Use OpenCV’s ArUco module to detect marker corners and IDs</li>
+<li>Calculate the center point of each detected marker</li>
+</ul>
+</li>
+<li>Tag Processing
+<ul>
+<li>Convert tag centers to 3D coordinates using depth information</li>
+<li>Track specific tag IDs (4, 5, 7) used for robot pose estimation</li>
+</ul>
+</li>
+<li>Pose Estimation
+<ul>
+<li>Use tag 4 as the origin point</li>
+<li>Calculate robot orientation using relative positions of tags 5 and 7</li>
+<li>Establish the robot’s coordinate system for movement planning</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://github.com/will-d-chen/realsense_pointcloud/blob/main/realsense_pointcloud_py/aruco_detect.py" target="_blank" rel="noopener">Github Link</a></p>
+<h4>Path Planning and Execution</h4>
+<p>The robot uses computer vision data to plan and execute climbing movements:</p>
+<ol>
+<li>Position Transformation
+<ul>
+<li>Convert all detected hold positions from camera space to robot space</li>
+<li>Apply coordinate transformations using TF2 library</li>
+<li>Ensure all positions are in the same reference frame</li>
+</ul>
+</li>
+<li>Target Selection
+<ul>
+<li>Define goal positions for left and right arms</li>
+<li>Filter out unreachable holds based on robot kinematics</li>
+<li>Select the closest reachable hold to each arm’s goal position</li>
+<li>Consider approach angles and gripping constraints</li>
+</ul>
+</li>
+<li>Movement Planning
+<ul>
+<li>Plan separate trajectories for each arm</li>
+<li>Include pre-grasp positioning with offsets</li>
+<li>Account for robot’s current pose and joint limits</li>
+<li>Ensure collision-free paths</li>
+</ul>
+</li>
+<li>Execution Control
+<ul>
+<li>Coordinate movements between arms</li>
+<li>Monitor position and force feedback</li>
+<li>Implement safety checks and failure recovery</li>
+<li>Verify successful grasp before proceeding</li>
+</ul>
+</li>
+<li>Safety Features
+<ul>
+<li>Validate all transformations before execution</li>
+<li>Check motion plans for collisions</li>
+<li>Monitor execution progress</li>
+<li>Implement emergency stop capabilities</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://github.com/will-d-chen/cliffhangers_ws/blob/main/src/climbbot3_moveit/scripts/real_climb.py" target="_blank" rel="noopener">Github Link</a></p>
+<h4>System Integration</h4>
+<p>These four components work together to create a functional climbing system:</p>
+<ol>
+<li>The blue object detection identifies potential holds</li>
+<li>2D to 3D conversion provides spatial understanding</li>
+<li>ArUco tracking maintains robot pose awareness</li>
+<li>Path planning converts this information into actual climbing movements</li>
+</ol>
+<p>The integrated system enables the robot to:</p>
+<ul>
+<li>Find and evaluate climbing holds</li>
+<li>Track its position and orientation</li>
+<li>Plan efficient climbing routes</li>
+<li>Execute safe climbing movements</li>
+</ul>
+<h2>Working Model</h2>
+<p>With everything assembled, the final result should look pretty cool! It features two 3-dof arms including a three stage linear actuator for reaching far distances, aruco tag localization, and ROS2 capabilities including handhold detection and path planning with a depth camera. This assembly also has the option to convert the static grippers in actuated grippers for more advanced surfaces.</p>
+<figure><img src="@root/files/capstone-Subject-2.png" alt="" loading="lazy"></figure>
+<p><em>Cliffhanger climbing robot, fully assembled</em></p>
+<p>A demonstration video is shown below!</p>
+<div class="video"><iframe title="Cliffhanger Climbing Robot Demo" src="https://www.youtube.com/embed/IypKVpnlkBE?feature=oembed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>

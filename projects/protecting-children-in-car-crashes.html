@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Using FEA to Protect Children in Car Crashes · Sarah Glomski</title>
+<meta name="description" content="During my senior year, I enrolled in a senior design course led by Dr. Jason Luck, who is renowned for his research on pediatric neck biomechanics and injury response. Given that…">
+<meta property="og:title" content="Using FEA to Protect Children in Car Crashes · Sarah Glomski">
+<meta property="og:description" content="During my senior year, I enrolled in a senior design course led by Dr. Jason Luck, who is renowned for his research on pediatric neck biomechanics and injury response. Given that…">
+<meta property="og:image" content="https://sarah-glomski.github.io/files/Screenshot-2024-02-26-at-11.36.12-PM.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="../index.html">Sarah Glomski</a>
+    <nav class="site-nav" aria-label="Main"><a href="../index.html" aria-current="page">Projects</a><a href="../research.html">Research</a><a href="../about.html">About</a><a href="../resume.html">Resume</a><a class="icon-link" href="https://www.linkedin.com/in/sarah-glomski/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></nav>
+  </div>
+</header>
+<main>
+<article class="post">
+  <header class="post-head wrap narrow">
+    <a class="back" href="../index.html#projects">← All projects</a>
+    <ul class="tags"><li>Research</li><li>Simulation</li></ul>
+    <h1>Using FEA to Protect Children in Car Crashes</h1>
+    <p class="meta">February 2024</p>
+  </header>
+  <div class="prose wrap narrow">
+<p>During my senior year, I enrolled in a senior design course led by Dr. Jason Luck, who is renowned for his research on pediatric neck biomechanics and injury response. Given that car crashes were a leading cause of adolescent fatalities in the 2010s, it became clear that accurately representing the biomechanical responses of young bodies in crash tests was crucial. Whiplash, in particular, is a complex injury that necessitates an accurate neck model in crash test dummies.</p>
+<figure><img src="../files/Screenshot-2024-02-27-at-1.58.21-PM.png" alt="" loading="lazy"></figure>
+<p>To address this, we used LS-DYNA, a sophisticated finite element solver commonly employed in the automotive industry to simulate crash scenarios. Our goal was to evaluate the performance of the current Hybrid-III neck model against real pediatric neck responses documented in the literature.</p>
+<figure><img src="../files/Screenshot-2024-02-27-at-2.00.20-PM.png" alt="" loading="lazy"></figure>
+<p>Through rigorous testing and iterative design, our team developed a new neck model that significantly outperformed the Hybrid-III in several key tests. Our innovative design featured a nonlinear shape, horizontal slits, vertical cables, and a pin joint at the top, all aimed at better simulating the anatomical neck.</p>
+<div class="gallery"><figure><img src="../files/Screenshot-2024-02-26-at-11.36.50-PM.png" alt="" loading="lazy"></figure>
+<figure><img src="../files/Screenshot-2024-02-26-at-11.36.12-PM.png" alt="" loading="lazy"></figure></div><p>We conducted a series of tests in LS-DYNA, including compression, tension, extension, and flexion, to evaluate the new model&#8217;s performance. Additionally, we replicated real-life tests from a study at the Naval Biodynamics Laboratory (NBDL), which involved tracking the center of gravity (CG) of children’s heads during go-kart-like sled decelerations—similar to bumper car collisions.</p>
+<p>The results of our simulations were compared against the study data, represented by a blue corridor in the plots below. The Hybrid-III model, shown in red, consistently fell outside this corridor, indicating its inadequacy. In contrast, our neck model demonstrated a much closer alignment with the expected data.</p>
+<figure><img src="../files/Screenshot-2024-02-27-at-2.04.41-PM-e1709060823729.png" alt="" loading="lazy"></figure>
+<p>Although not flawless, our model showed marked improvement, achieving a performance score of 79.8 out of 100 compared to the Hybrid-III’s 65.8 out of 100, as determined by cross-correlation analyses.</p>
+<figure><img src="../files/Screenshot-2024-02-27-at-2.05.14-PM-e1709060805415.png" alt="" loading="lazy"></figure>
+<p>My primary role involved creating and refining the CAD models in SolidWorks throughout the iteration process. By the end of the semester, I produced detailed engineering drawings of both the individual components and the complete assembly, which are illustrated below. My contributions were pivotal in quickly adapting the model based on iterative test results.</p>
+<div class="gallery"><div class="gallery"><figure><img src="../files/Screenshot-2024-02-27-at-2.10.00-PM.png" alt="" loading="lazy"></figure><figure><img src="../files/Screenshot-2024-02-27-at-2.10.11-PM.png" alt="" loading="lazy"></figure></div></div>
+<p>At the semester’s end, my team and I presented our findings at an engineering poster symposium, raising awareness about adolescent motor vehicle safety and engaging in insightful discussions with Duke students and faculty.</p>
+<figure><img src="../files/Screenshot-2024-02-28-at-4.24.43-PM.jpg" alt="" loading="lazy"></figure>
+
+  </div>
+  <div class="wrap narrow"><nav class="pager" aria-label="More projects"><a class="prev" href="gener8-cartridge-design.html"><span>Newer</span>Cartridge Design as a Gener8 Intern</a><a class="next" href="using-machine-learning-to-track-concussions-in-football.html"><span>Older</span>Harnessing AI to Track Concussions in Football</a></nav></div>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-cta">Contact</p>
+    <div class="footer-links">
+      <a href="mailto:glomski@stanford.edu"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm-1 1 9 7 9-7"/></svg><span>glomski@stanford.edu</span></a>
+      <a href="https://www.linkedin.com/in/sarah-glomski/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>LinkedIn</span></a>
+      <a href="../files/Sarah-Glomski-Resume.pdf" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8zm0 0v5h5M9 13h6M9 17h6"/></svg><span>Resume (PDF)</span></a>
+    </div>
+    <p class="fineprint">© 2026 Sarah Glomski</p>
+  </div>
+</footer>
+</body>
+</html>
