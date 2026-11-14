@@ -196,7 +196,7 @@ def build_research():
         entries.append(f"""<li class="tl-item">
   <p class="tl-date">{escape(e['dates'])}</p>
   <div class="tl-body">
-    <h3>{escape(e['org'])}{f' <a class="ext-link" href="{escape(e["link"])}" target="_blank" rel="noopener" aria-label="Open lab website in a new tab" title="Open lab website">{ICON_EXTERNAL}</a>' if e.get('link') else ''}</h3>
+    <h3>{escape(e['org'])}{f' <a class="ext-link" href="{escape(e["link"])}" target="_blank" rel="noopener" aria-label="Open website in a new tab" title="Open website">{ICON_EXTERNAL}</a>' if e.get('link') else ''}</h3>
     {f'<p class="tl-role">{escape(e["role"])}</p>' if e['role'] else ''}
     {f'<ul class="tl-bullets">{bullets}</ul>' if bullets else ''}
     {f'<ul class="media-list">{media}</ul>' if media else ''}

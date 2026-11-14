@@ -25,7 +25,8 @@
         "href": "projects/standardizing-medicine-with-robotics-from-sutures-to-epidurals.html",
         "note": "Blog post"
       }
-    ]
+    ],
+    "link": "https://surgery.duke.edu/education-and-training/training-sites-and-laboratories/surgical-education-and-activities-lab"
   },
   {
     "org": "Los Alamos National Laboratory",
@@ -55,7 +56,8 @@
         "href": "files/LANL-Presentation-2024.pdf",
         "note": "Presented at the 2024 Los Alamos Student Symposium"
       }
-    ]
+    ],
+    "link": "https://www.lanl.gov/"
   },
   {
     "org": "Robotics Projects",
@@ -147,7 +149,8 @@
         "href": "files/SUUP-Grant.pdf",
         "note": "Submitted to receive SUUP grant funding"
       }
-    ]
+    ],
+    "link": "https://biomechanics.bme.duke.edu/"
   },
   {
     "org": "Duke BME Vehicle Safety Design Course",
@@ -191,7 +194,8 @@
         "href": "files/DOmath-Presentation-Slides.pdf",
         "note": "Presented at the DOmath Research Symposium"
       }
-    ]
+    ],
+    "link": "https://math.duke.edu/domath"
   },
   {
     "org": "Human Neuromechanics Laboratory, University of Florida",
@@ -218,6 +222,7 @@
         "href": "files/SSTP-Paper.pdf",
         "note": "Received the Best BME Research Paper Award (85+ participants)"
       }
-    ]
+    ],
+    "link": "https://faculty.eng.ufl.edu/human-neuromechanics-laboratory/"
   }
 ]
