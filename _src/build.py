@@ -25,6 +25,7 @@ NAV = [("Projects", "index.html"), ("Research", "research.html"), ("About", "abo
 ICON_LINKEDIN = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>'
 ICON_MAIL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm-1 1 9 7 9-7"/></svg>'
 ICON_DOC = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8zm0 0v5h5M9 13h6M9 17h6"/></svg>'
+ICON_EXTERNAL = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6m0-6-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>'
 ICON_ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>'
 
 
@@ -195,7 +196,7 @@ def build_research():
         entries.append(f"""<li class="tl-item">
   <p class="tl-date">{escape(e['dates'])}</p>
   <div class="tl-body">
-    <h3>{f'<a href="{escape(e["link"])}" target="_blank" rel="noopener">{escape(e["org"])}</a>' if e.get('link') else escape(e['org'])}</h3>
+    <h3>{escape(e['org'])}{f' <a class="ext-link" href="{escape(e["link"])}" target="_blank" rel="noopener" aria-label="Open lab website in a new tab" title="Open lab website">{ICON_EXTERNAL}</a>' if e.get('link') else ''}</h3>
     {f'<p class="tl-role">{escape(e["role"])}</p>' if e['role'] else ''}
     {f'<ul class="tl-bullets">{bullets}</ul>' if bullets else ''}
     {f'<ul class="media-list">{media}</ul>' if media else ''}
