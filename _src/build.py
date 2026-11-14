@@ -135,7 +135,7 @@ def build_home(projects):
 <section class="projects wrap" id="projects">
   <div class="section-head">
     <h2>Projects</h2>
-    <p>Academic, professional, and personal work — {len(projects)} write-ups and counting.</p>
+    <p>Academic, professional, and personal work.</p>
   </div>
   <div class="chips" role="group" aria-label="Filter projects">{chips}</div>
   <div class="grid">
