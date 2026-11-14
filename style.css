@@ -133,6 +133,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; let
 .tl-item { display: grid; grid-template-columns: 180px 1fr; gap: 32px; padding: 32px 0; border-top: 1px solid var(--line); }
 .tl-date { margin: 4px 0 0; color: var(--muted); font-size: 14px; font-weight: 500; }
 .tl-body h3 { font-size: 24px; margin: 0 0 4px; }
+.tl-body h3 a { color: inherit; text-decoration-color: var(--line); text-underline-offset: 4px; }
+.tl-body h3 a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .tl-role { margin: 0 0 12px; color: var(--accent); font-weight: 500; font-size: 15px; }
 .tl-bullets { margin: 0 0 18px; padding-left: 20px; }
 .tl-bullets li { margin-bottom: 6px; }

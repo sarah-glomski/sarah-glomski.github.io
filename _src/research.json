@@ -1,10 +1,11 @@
 [
   {
-    "org": "PhD Research Rotation Program, Stanford University",
+    "org": "Collaborative Haptics and Robotics in Medicine (CHARM) Lab, Stanford University",
+    "link": "https://charm.stanford.edu/",
     "dates": "Sep 2025 – Present",
-    "role": "Doctoral Researcher",
+    "role": "PhD Student",
     "bullets": [
-      "Leading projects to teach robots to draw context from humans in human-robot collaborative manipulation tasks"
+      "Built a robot learning pipeline for force-aware, contact-rich manipulation with haptic feedback"
     ],
     "media": []
   },
