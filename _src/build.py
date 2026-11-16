@@ -217,7 +217,7 @@ def build_research():
 
 def build_about():
     body = f"""<section class="wrap about">
-  <div class="about-photo"><img src="files/profile.png" alt="Portrait of Sarah Glomski" width="720" height="900"></div>
+  <div class="about-photo"><picture><source srcset="files/profile-cutout.png" media="(prefers-color-scheme: dark)"><img src="files/profile.png" alt="Portrait of Sarah Glomski" width="720" height="900"></picture></div>
   <div class="about-text">
     <p class="eyebrow">About me</p>
     <h1>Design is the common thread.</h1>

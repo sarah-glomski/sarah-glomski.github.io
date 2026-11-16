@@ -93,7 +93,6 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; let
 @media (prefers-color-scheme: dark) {
   .hero-photo::before { inset: 6% -4% -4% 8%; border-radius: 32px; transform: rotate(3deg); }
   .hero-photo img { mix-blend-mode: normal; border-radius: 28px; -webkit-mask-image: none; mask-image: none; max-width: 380px; }
-  .about-photo { background: #fff; }
 }
 
 /* Projects */
@@ -155,6 +154,9 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; let
 .about-photo { position: sticky; top: 96px; background: radial-gradient(circle at 50% 35%, var(--accent-soft), var(--glow)); border-radius: 24px; overflow: hidden; }
 .about-photo img { width: 100%; mix-blend-mode: multiply; }
 .about h1 { font-size: clamp(32px, 4vw, 44px); margin: 0 0 20px; }
+@media (prefers-color-scheme: dark) {
+  .about-photo img { mix-blend-mode: normal; }
+}
 
 /* Resume */
 .resume-embed { display: block; width: 100%; height: 1100px; max-height: 85vh; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); margin-bottom: 88px; }
